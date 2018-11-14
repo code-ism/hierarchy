@@ -1,0 +1,20 @@
+# Usge
+# -----
+# sudo docker-compose build
+# sudo docker-compose up
+version: '3.6'
+services:
+  hierarchy-app: 
+    build: .
+    container_name: apphost
+    ports:
+      - 8077:8080
+    working_dir: /opt/app
+    depends_on: 
+      - mongo
+      
+  mongo: 
+    image: mongo
+    container_name: mongohost
+    ports:
+      - 27018:27017
