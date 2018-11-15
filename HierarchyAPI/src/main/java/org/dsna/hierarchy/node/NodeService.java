@@ -3,8 +3,11 @@ package org.dsna.hierarchy.node;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.dsna.hierarchy.AppConstants;
+import org.dsna.hierarchy.node.exception.NodeNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 
 /*
  * Service class for Node entity.
@@ -39,10 +42,14 @@ public class NodeService {
 	 * Also updates the height of nodes once the parent node has changed.
 	 * Parameters : nodeId(id of given node), newParentId(id of parent node)
 	 */
+	@ExceptionHandler(NodeNotFoundException.class)
 	public void changeParentNode(String nodeId, String newParentId) {
 		
 		Node givenNode = nodeRepository.findByNodeId(nodeId);
 		Node newParentNode = nodeRepository.findByNodeId(newParentId);
+		if(givenNode==null || newParentNode==null){
+			throw new NodeNotFoundException(AppConstants.ERROR_NODE_NOT_FOUND);
+		}
 		int heightOfgivenNode = givenNode.getHeight();
 		int heightOfnewParentNode = newParentNode.getHeight();
 		givenNode.setParentNode(newParentId);
