@@ -1,6 +1,6 @@
 package org.dsna.hierarchy.model;
 
-import org.dsna.hierarchy.AppConstants;
+import org.dsna.hierarchy.constants.AppConstants;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HeirarchyApp {
+public class HeirarchyAPI {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HeirarchyApp.class, args);
+		SpringApplication.run(HeirarchyAPI.class, args);
 	}
 
 }

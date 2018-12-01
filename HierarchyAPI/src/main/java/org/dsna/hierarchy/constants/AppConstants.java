@@ -1,4 +1,4 @@
-package org.dsna.hierarchy;
+package org.dsna.hierarchy.constants;
 
 /*
  * Class to manage constant values in the app.

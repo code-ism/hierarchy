@@ -3,7 +3,7 @@ package org.dsna.hierarchy.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.dsna.hierarchy.AppConstants;
+import org.dsna.hierarchy.constants.AppConstants;
 import org.dsna.hierarchy.model.Node;
 import org.dsna.hierarchy.service.NodeService;
 import org.springframework.beans.factory.annotation.Autowired;
