@@ -3,7 +3,7 @@ package org.dsna.hierarchy.service;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.dsna.hierarchy.constants.AppConstants;
+import org.dsna.hierarchy.constants.APIConstants;
 import org.dsna.hierarchy.exception.NodeNotFoundException;
 import org.dsna.hierarchy.model.Node;
 import org.dsna.hierarchy.repository.NodeRepository;
@@ -50,7 +50,7 @@ public class NodeService {
 		Node givenNode = nodeRepository.findByNodeId(nodeId);
 		Node newParentNode = nodeRepository.findByNodeId(newParentId);
 		if(givenNode==null || newParentNode==null){
-			throw new NodeNotFoundException(AppConstants.ERROR_NODE_NOT_FOUND);
+			throw new NodeNotFoundException(APIConstants.ERROR_NODE_NOT_FOUND);
 		}
 		int heightOfgivenNode = givenNode.getHeight();
 		int heightOfnewParentNode = newParentNode.getHeight();

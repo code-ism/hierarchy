@@ -3,7 +3,7 @@ package org.dsna.hierarchy.constants;
 /*
  * Class to manage constant values in the app.
  */
-public final class AppConstants {
+public final class APIConstants {
 	public static final String COLLECTION_NODE = "Nodes";
 	public static final String NODE = "node";
 	public static final String PARENT = "parent";

@@ -1,6 +1,6 @@
 package org.dsna.hierarchy.model;
 
-import org.dsna.hierarchy.constants.AppConstants;
+import org.dsna.hierarchy.constants.APIConstants;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
  * This class models the Node entities.
  * Each node is a representation of Node in the Tree Hierarchy
  */
-@Document(collection=AppConstants.COLLECTION_NODE)
+@Document(collection=APIConstants.COLLECTION_NODE)
 public class Node {
 
 	@Id private String nodeId;
