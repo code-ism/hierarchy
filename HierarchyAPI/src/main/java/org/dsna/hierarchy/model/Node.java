@@ -1,4 +1,4 @@
-package org.dsna.hierarchy.node;
+package org.dsna.hierarchy.model;
 
 import org.dsna.hierarchy.AppConstants;
 import org.springframework.data.annotation.Id;

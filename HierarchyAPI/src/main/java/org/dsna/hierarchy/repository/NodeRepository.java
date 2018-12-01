@@ -1,7 +1,8 @@
-package org.dsna.hierarchy.node;
+package org.dsna.hierarchy.repository;
 
 import java.util.List;
 
+import org.dsna.hierarchy.model.Node;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 public interface NodeRepository extends MongoRepository<Node, String>{

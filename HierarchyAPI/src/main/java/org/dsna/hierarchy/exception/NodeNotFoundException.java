@@ -1,4 +1,4 @@
-package org.dsna.hierarchy.node.exception;
+package org.dsna.hierarchy.exception;
 
 public class NodeNotFoundException extends RuntimeException{
 	
